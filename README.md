@@ -103,6 +103,10 @@ Contributions are welcome! Here's how you can help:
 
 ## 📝 Changelog
 
+### v1.1.1 (2026-10-13)
+
+- Fixed Gemini and ChatGPT UI issues.
+
 ### v1.1.0 (2025-12-17)
 
 - Added support for Google NotebookLM, Adobe Firefly and Midjourney.

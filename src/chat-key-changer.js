@@ -16,7 +16,7 @@ class ChatKeyChanger {
             'chatgpt': {
                 'service': 'chatgpt',
                 'domains': ['openai.com', 'chatgpt.com'],
-                'inputs': ['#prompt-textarea', 'textarea[data-id="root"]', 'textarea[data-testid="textbox"]'],
+                'inputs': ['#prompt-textarea', 'textarea[data-id="root"]', 'textarea[data-testid="textbox"]', '[data-composer-markdown]'],
                 'buttons': ['button[data-testid="send-button"]', '[data-testid="fruitjuice-send-button"]', 'button[aria-label*="Send message"]', 'form button[type="submit"]'],
                 'bind': 0
             },
@@ -27,12 +27,19 @@ class ChatKeyChanger {
                 'buttons': ['div[type=button] + div button'],
                 'bind': 1
             },
+            'gemini': {
+                'service': 'gemini',
+                'domains': ['gemini.google.com'],
+                'inputs': ['.ql-editor'],
+                'buttons': ['button.submit', 'button.send-button'],
+                'bind': 0
+            },
             'canva': {
                 'service': 'canva',
                 'domains': ['canva.com'],
                 'inputs': ['textarea'],
                 'buttons': ['button[aria-label*="Generate"]', 'button[type="submit"]', 'button:has(svg[viewBox*="send"])'],
-                'bind': 0
+                'binddo': 0
             },
             'github': {
                 'service': 'github',
@@ -44,15 +51,8 @@ class ChatKeyChanger {
             'microsoftCopilot': {
                 'service': 'microsoftCopilot',
                 'domains': ['copilot.microsoft.com'],
-                'inputs': ['textarea'],
-                'buttons': ['button[data-testid="submit-button"]'],
-                'bind': 0
-            },
-            'gemini': {
-                'service': 'gemini',
-                'domains': ['gemini.google.com'],
-                'inputs': ['.ql-editor'],
-                'buttons': ['button.submit'],
+                'inputs': ['textarea', '[contenteditable="true"]'],
+                'buttons': ['button[data-testid="submit-button"]', '.fai-SendButton'],
                 'bind': 0
             },
             'poe': {
